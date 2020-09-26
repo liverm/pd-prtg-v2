@@ -1,9 +1,10 @@
 # prtg2pd
 
 ## Test Environment
-Windows Server 2016 Standard
-PRTG v19.2
-PowerShell v5.x or higher
+This PowerShell script has been tested with the following configuration:
+* Windows Server 2016 Standard
+* PowerShell v5.x or higher
+* PRTG v19.2
 
 ## Requirement
 Send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint managed by an event ruleset.
@@ -11,7 +12,7 @@ Send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint manage
 ## Installation
 Copy the PowerShell script to the following directory on the PRTG server:
 
-C:\Program Files (x86)\PRTG Network Monitor\Notifications\EXE
+`C:\Program Files (x86)\PRTG Network Monitor\Notifications\EXE`
 
 The script is designed to send events to PagerDuty that will both trigger and resolve an incident.  Modify the script adding the appropriate PagerDuty integration key.  To minimize the number of scripts that need to be maintained, consider using a key associated with an event ruleset endpoint.
 
