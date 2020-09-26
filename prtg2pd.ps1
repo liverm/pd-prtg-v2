@@ -29,8 +29,8 @@ $regex = [regex] "\((.*)\)"
 $action = $regex::match($status, $regex).groups[1]
 
 switch ($action) {
-    "now: Up" { $Event = "resolve" }
-    default { $Event = "trigger" }
+    "now: Up" { $PDevent = "resolve" }
+    default { $PDevent = "trigger" }
 }
 
 # Determine the Severity
@@ -51,7 +51,7 @@ $Timestamp = Get-Date -UFormat "%Y-%m-%dT%T%Z"
 
 $AlertPayload = @{
     routing_key  = $RoutingKey
-    event_action = $Event
+    event_action = $PDevent
     dedup_key    = $sensor
     client       = "PRTG Network Monitor"
     client_url   = $prtg_home
