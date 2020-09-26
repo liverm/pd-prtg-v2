@@ -1,15 +1,17 @@
 # prtg2pd
 
+This is a PowerShell script that can be used with PRTG Network Monitor to send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint managed by an event ruleset.
+
+
 ## Test Environment
 This PowerShell script has been tested with the following configuration:
 * Windows Server 2016 Standard
 * PowerShell v5.x or higher
 * PRTG v19.2
 
-## Requirement
-Send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint managed by an event ruleset.
 
 ## Installation
+
 Copy the PowerShell script to the following directory on the PRTG server:
 
 `C:\Program Files (x86)\PRTG Network Monitor\Notifications\EXE`
@@ -29,7 +31,9 @@ Then create a Notification Trigger.  This can be done in one of two ways:
 1. Create a new Library and drag the desired devices into the Library and then create the Notification Trigger at this level.
 1. Create the Notification Trigger at the Root level.
 
+
 ## Futher Optimisations Within PagerDuty
+
 The final thing I would suggest is that you then enable alert grouping on your services.
 
 This will then group all the alerts for a given node into a single incident.
