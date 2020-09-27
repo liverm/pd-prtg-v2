@@ -20,6 +20,8 @@ The script is designed to send events to PagerDuty that will both trigger and re
 
 The script is called via a new Notification Template (see Setup | Account Settings | Notification Templates).
 
+![Image 1: Creating a new Notification Template in PRTG](./images/Image1-Notification-Template.png)
+
 Then select the 'Execute Program' method and select the corresponding PowerShell script for creating and resolving PagerDuty incidents.
 
 Specify the parameters PRTG should send to the PowerShell script.  The script expects the following parameters in the exact order:
