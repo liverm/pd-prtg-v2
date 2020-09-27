@@ -20,9 +20,15 @@ The script is designed to send events to PagerDuty that will both trigger and re
 
 The script is called via a new Notification Template (see Setup | Account Settings | Notification Templates).
 
+
 ![Image 1: Creating a new Notification Template in PRTG](./images/Image1-Notification-Template.png)
 
+
 Then select the 'Execute Program' method and select the corresponding PowerShell script for creating and resolving PagerDuty incidents.
+
+
+![Image 2: Select and configure the Execture Program method in PRTG](./images/Image2-Execute-Program-Method.png)
+
 
 Specify the parameters PRTG should send to the PowerShell script.  The script expects the following parameters in the exact order:
 
@@ -30,12 +36,23 @@ Specify the parameters PRTG should send to the PowerShell script.  The script ex
 
 Then create a Notification Trigger.  This can be done in one of two ways:
 
+
+![Image 3: Configure the Notification Triggers in PRTG](./images/Image3-Notification-Triggers.png)
+
+
 1. Create a new Library and drag the desired devices into the Library and then create the Notification Trigger at this level.
 1. Create the Notification Trigger at the Root level.
 
 
 ## Futher Optimisations Within PagerDuty
 
-The final thing I would suggest is that you then enable alert grouping on your services.
+To reduce the number of incidents created by PagerDuty [alert grouping](https://support.pagerduty.com/docs/event-intelligence) should be enabled on your services.
+
+
+![Image 4: Configure Alert Grouping in PagerDuty](./images/Image4-Alert-Grouping.png)
+
 
 This will then group all the alerts for a given node into a single incident.
+
+
+![Image 5: Incident with multiple alerts in PagerDuty](./images/Image5-Grouped-Alerts.png)
