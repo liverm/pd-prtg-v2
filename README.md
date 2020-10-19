@@ -1,6 +1,6 @@
-# prtg2pd
+# PD-PRTG-V2
 
-This is a PowerShell script that can be used with PRTG Network Monitor to send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint managed by an event ruleset.
+This repository contains a PowerShell script (prtg2pd.ps1) that can be used with PRTG Network Monitor to send a JSON-formatted alert payload to a PagerDuty Events v2 API endpoint managed by an event ruleset.
 
 
 ## Test Environment
