@@ -42,7 +42,7 @@ switch ($colorofstate) {
     default { $Severity = "critical" }
 }
 
-$RoutingKey = "3534011a3b6d450a8ae967b57f6ef48a"
+$RoutingKey = "<INSERT ROUTING KEY HERE>"
 $Url = "https://events.pagerduty.com/v2/enqueue"
 
 $Description = "$device $sensor $status $down"
